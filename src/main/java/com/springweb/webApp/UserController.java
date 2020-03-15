@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 	
 	@GetMapping("/users")
 	public List<User> getUsers() {
+		System.out.println("print all users");
 		return (List<User>) userRepository.findAll();
 	}
 
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.*;
 
 	@PostMapping("/users")
 	void addUser(@RequestBody User user) {
+		System.out.println(user + " saved");
 		userRepository.save(user);
 	}
 }

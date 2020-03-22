@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 		this.userRepository = userRepository;
 	}
 	
-	@GetMapping("/users")
+	@GetMapping("/allusers")
 	public List<User> getUsers() {
 		System.out.println("print all users");
 		return (List<User>) userRepository.findAll();
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.*;
 		return "test";
 	}
 
-	@PostMapping("/users")
+	@PostMapping("/allusers")
 	void addUser(@RequestBody User user) {
 		System.out.println(user + " saved");
 		userRepository.save(user);

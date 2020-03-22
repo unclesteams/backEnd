@@ -3,19 +3,17 @@ package com.springweb.webApp;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class WebAppApplication {
+public class WebAppApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext app = SpringApplication.run(WebAppApplication.class, args);
-		//for(String name : app.getBeanDefinitionNames()){
-		//	System.out.println(name);
-		//}
 		System.out.println(app);
 	}
 
